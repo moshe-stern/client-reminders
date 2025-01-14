@@ -13,6 +13,6 @@ export async function sendRemindersHandler(
 }
 
 app.timer("send-reminders", {
-  schedule: "0 */5 * * * *",
+  schedule: "0 0 9 * * *",
   handler: sendRemindersHandler,
 });

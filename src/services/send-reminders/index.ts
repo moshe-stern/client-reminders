@@ -8,7 +8,7 @@ async function getClientsToBeReminded(): Promise<IClientReminder[]> {
 }
 
 async function sendReminders() {
-  const clients = await getClientsToBeReminded();
+  const clients = await getClientsToBeReminded(); //use attain-aba-shared
   const grouped = groupBy(clients, "remindType");
   const res = await Promise.all(
     Object.entries(grouped).map((g) => {
